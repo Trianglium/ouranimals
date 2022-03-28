@@ -1,2 +1,2 @@
-# ouranimals
-API for random fox, bear, dog, and otter pics
+# OurAnimals 
+Animal Image Library specializing in bear, dog, fox and otter pics. OurAnimals is intended to be a RESTful API built with Node.Js
