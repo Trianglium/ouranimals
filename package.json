@@ -1,0 +1,23 @@
+{
+  "name": "ouranimals",
+  "version": "1.0.0",
+  "description": "Image Library for bear, dog, fox, and otter photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trianglium/ouranimals.git"
+  },
+  "keywords": [
+    "animals", "fox", "bear", "dog", "otter", "REST", "API", "image library", "our animals"
+  ],
+  "author": "Jordan Brocker Rudow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trianglium/ouranimals/issues"
+  },
+  "homepage": "https://github.com/Trianglium/ouranimals#readme"
+}
