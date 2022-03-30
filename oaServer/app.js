@@ -13,6 +13,23 @@ var dogRouter = require('./routes/dogRouter');
 var foxRouter = require('./routes/foxRouter');
 var otterRouter = require('./routes/otterRouter');
 
+
+// Connect to MongoDB Server
+const mongoose = require('mongoose');
+
+const Bears = require('./models/bears');
+const Dogs = require('./models/dogs');
+const Foxes = require('./models/foxes');
+const Otters = require('./models/otters');
+
+const url = 'mongodb://localhost:27017/ourAnimals';
+const connect = mongoose.connect(url);
+
+connect.then((db) => {
+    console.log("Connected correctly to server");
+}, (err) => { console.log(err); });
+
+
 var app = express();
 
 // view engine setup
@@ -29,10 +46,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // Animal Image Routers
-app.use('/bear', bearRouter);
-app.use('/dog', dogRouter);
-app.use('/fox', foxRouter);
-app.use('/otter', otterRouter);
+app.use('/bears', bearRouter);
+app.use('/dogs', dogRouter);
+app.use('/foxes', foxRouter);
+app.use('/otters', otterRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
