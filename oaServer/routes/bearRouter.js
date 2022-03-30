@@ -1,55 +1,81 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+// Integrate Bear Schema
+const Bears = require('../models/bears');
 
 const bearRouter = express.Router();
 
 bearRouter.use(bodyParser.json());
 
-// bears
 bearRouter.route('/')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
-    res.end('Will send all the bears to you!');
+    Bears.find({})
+    .then((bears) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(bears);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
 .post((req, res, next) => {
-    res.end('Will add the bear: ' + req.body.name + ' with details: ' + req.body.description);
+    Bears.create(req.body)
+    .then((bear) => {
+        console.log('bear Created ', bear);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(bear);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
 .put((req, res, next) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /bears');
 })
 .delete((req, res, next) => {
-    res.end('Deleting all bears');
+    Bears.remove({})
+    .then((resp) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(resp);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 });
 
-
-// bearId
 bearRouter.route('/:bearId')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
-    res.end('Will send details of the bear: ' + req.params.bearId +' to you!');
+    Bears.findById(req.params.bearId)
+    .then((bear) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(bear);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
-
 .post((req, res, next) => {
-  res.statusCode = 403;
-  res.end('POST operation not supported on /bears/'+ req.params.bearId);
+    res.statusCode = 403;
+    res.end('POST operation not supported on /bears/'+ req.params.bearId);
 })
-
 .put((req, res, next) => {
-  res.write('Updating the bear: ' + req.params.bearId + '\n');
-  res.end('Will update the bear: ' + req.body.name + ' with details: ' + req.body.description);
+    Bears.findByIdAndUpdate(req.params.bearId, {
+        $set: req.body
+    }, { new: true })
+    .then((bear) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(bear);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
-
 .delete((req, res, next) => {
-    res.end('Deleting bear: ' + req.params.bearId);
+    Bears.findByIdAndRemove(req.params.bearId)
+    .then((resp) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(resp);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 });
 
 module.exports = bearRouter;
