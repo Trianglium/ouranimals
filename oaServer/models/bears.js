@@ -6,13 +6,7 @@ const bearSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    },
-    credit: {
-        type: String,
-        required: true
-    },
-    {
-    timestamps: true
+    }
 });
 
 

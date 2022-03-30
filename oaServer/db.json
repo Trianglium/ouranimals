@@ -1,1 +1,34 @@
-
+{
+  "otters": [
+    {
+      "image": "images/otters/1.jpg"
+    },
+    {
+      "image": "images/otters/2.jpg"
+    }
+  ],
+  "dogs": [
+    {
+      "image": "images/dogs/3.jpg"
+    },
+    {
+      "image": "images/dogs/4.jpg"
+    }
+  ],
+  "bears": [
+    {
+      "image": "images/bears/5.jpg"
+    },
+    {
+      "image": "images/bears/6.jpg"
+    }
+  ],
+  "foxes": [
+    {
+      "image": "images/foxes/7.jpg"
+    },
+    {
+      "image": "images/foxes/8.jpg"
+    }
+  ]
+}
