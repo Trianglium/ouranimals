@@ -1,55 +1,81 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+// Integrate fox Schema
+const Foxes = require('../models/foxes');
 
 const foxRouter = express.Router();
 
 foxRouter.use(bodyParser.json());
 
-// foxes
 foxRouter.route('/')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
-    res.end('Will send all the foxes to you!');
+    Foxes.find({})
+    .then((foxes) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(foxes);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
 .post((req, res, next) => {
-    res.end('Will add the fox: ' + req.body.name + ' with details: ' + req.body.description);
+    Foxes.create(req.body)
+    .then((fox) => {
+        console.log('fox Created ', fox);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(fox);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
 .put((req, res, next) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /foxes');
 })
 .delete((req, res, next) => {
-    res.end('Deleting all foxes');
+    Foxes.remove({})
+    .then((resp) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(resp);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 });
 
-
-// foxId
 foxRouter.route('/:foxId')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
-})
 .get((req,res,next) => {
-    res.end('Will send details of the fox: ' + req.params.foxId +' to you!');
+    Foxes.findById(req.params.foxId)
+    .then((fox) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(fox);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
-
 .post((req, res, next) => {
-  res.statusCode = 403;
-  res.end('POST operation not supported on /foxes/'+ req.params.foxId);
+    res.statusCode = 403;
+    res.end('POST operation not supported on /foxes/'+ req.params.foxId);
 })
-
 .put((req, res, next) => {
-  res.write('Updating the fox: ' + req.params.foxId + '\n');
-  res.end('Will update the fox: ' + req.body.name + ' with details: ' + req.body.description);
+    Foxes.findByIdAndUpdate(req.params.foxId, {
+        $set: req.body
+    }, { new: true })
+    .then((fox) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(fox);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
-
 .delete((req, res, next) => {
-    res.end('Deleting fox: ' + req.params.foxId);
+    Foxes.findByIdAndRemove(req.params.foxId)
+    .then((resp) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(resp);
+    }, (err) => next(err))
+    .catch((err) => next(err));
 });
 
 module.exports = foxRouter;
