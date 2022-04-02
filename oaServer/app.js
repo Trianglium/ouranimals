@@ -12,7 +12,7 @@ var bearRouter = require('./routes/bearRouter');
 var dogRouter = require('./routes/dogRouter');
 var foxRouter = require('./routes/foxRouter');
 var otterRouter = require('./routes/otterRouter');
-
+var animalRouter = require('./routes/animalRouter');
 
 // Connect to MongoDB Server
 const mongoose = require('mongoose');
@@ -21,6 +21,7 @@ const Bears = require('./models/bears');
 const Dogs = require('./models/dogs');
 const Foxes = require('./models/foxes');
 const Otters = require('./models/otters');
+const Animals = require('./models/animals')
 
 const url = 'mongodb://localhost:27017/ourAnimals';
 const connect = mongoose.connect(url);
