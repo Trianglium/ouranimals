@@ -36,14 +36,12 @@ var foxSchema = new Schema({
     owner: [creditSchema]
 });
 
-var otterSchema = new Schema({
-    image: {
+var unsplashSchema = new Schema({
+    collection: {
         type: String,
         required: true,
         unique: true
-    },
-
-    owner: [creditSchema]
+    }
 });
 
 const animalSchema = new Schema({
