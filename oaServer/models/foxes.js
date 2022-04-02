@@ -6,10 +6,9 @@ const foxSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    }
+    },
+    owner: [creditSchema]
 });
-
-
 
 var Foxes = mongoose.model('Fox', foxSchema);
 module.exports = Foxes;

@@ -6,10 +6,9 @@ const bearSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    }
+    },
+    owner: [creditSchema]
 });
-
-
 
 var Bears = mongoose.model('Bear', bearSchema);
 module.exports = Bears;

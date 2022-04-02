@@ -6,10 +6,9 @@ const dogSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    }
+    },
+    owner: [creditSchema]
 });
-
-
 
 var Dogs = mongoose.model('Dog', dogSchema);
 module.exports = Dogs;
