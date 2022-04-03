@@ -3,6 +3,7 @@ const assert = require('assert');
 
 const url = 'mongodb://localhost:27017/';
 const dbname = 'ourAnimals';
+const dbOps = require('./utils/dbOps');
 
 MongoClient.connect(url, (err, client) => {
 
@@ -12,25 +13,32 @@ MongoClient.connect(url, (err, client) => {
 
     const db = client.db(dbname);
     const collection = db.collection("otters");
-    collection.insertOne({"image": "otters/1.jpg"},
-    (err, result) => {
-        assert.equal(err,null);
 
-        console.log("After Insert:\n");
-        console.log(result.ops);
+    dbOps.insertDocument(db, { image: "otters/2.jpg" },
+        "otters", (result) => {
+            console.log("Insert Document:\n", result.ops);
 
-        collection.find({}).toArray((err, docs) => {
-            assert.equal(err,null);
+            dbOps.findDocuments(db, "otters", (docs) => {
+                console.log("Found Documents:\n", docs);
 
-            console.log("Found:\n");
-            console.log(docs);
+                dbOps.updateDocument(db, { image: "otters/2.jpg" },
+                    { description: "Updated Test" }, "otters",
+                    (result) => {
+                        console.log("Updated Document:\n", result.result);
 
-            db.dropCollection("otters", (err, result) => {
-                assert.equal(err,null);
+                        dbOps.findDocuments(db, "otters", (docs) => {
+                            console.log("Found Updated Documents:\n", docs);
 
-                client.close();
+                            db.dropCollection("otters", (result) => {
+                                console.log("Dropped Collection: ", result);
+
+                                client.close();
+                            });
+                        });
+                    });
             });
-        });
     });
+
+
 
 });
