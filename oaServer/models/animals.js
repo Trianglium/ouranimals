@@ -1,55 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-var creditSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-        unique: true
-    }
-});
-
-var bearSchema = new Schema({
-    image: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    owner: [creditSchema]
-});
-
-var dogSchema = new Schema({
-    image: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    owner: [creditSchema]
-});
-
-var foxSchema = new Schema({
-    image: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    owner: [creditSchema]
-});
-
-var unsplashSchema = new Schema({
-    collection: {
-        type: String,
-        required: true,
-        unique: true
-    }
-});
+const Bears = require('./bears'),
+    Dogs = require('./dogs'),
+    Foxes = require('./foxes'),
+    Otters = require('./otters');
 
 const animalSchema = new Schema({
-  bears: [bearSchema],
-  dogs: [dogSchema],
-  foxes: [foxSchema],
-  otters: [otterSchema],
-  credits: [creditSchema]
+  image: {
+      type: String,
+      required: true,
+      unique: true
+  }
 });
 
 var Animals = mongoose.model('Animal', animalSchema);

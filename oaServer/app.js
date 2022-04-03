@@ -6,8 +6,7 @@ let express = require('express'),
     dbConfig = require('./conf/database'),
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
-    logger = require('morgan'),
-    Console = require("Console");
+    logger = require('morgan');
 
 //  Routers
 const indexRouter = require('./routes/index'),
@@ -28,19 +27,13 @@ const indexRouter = require('./routes/index'),
 
 // Connect MongoDB Server
 mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true
-}).then(() => {
-        Console.success('INFO Success! Database connected')
+mongoose.connect(dbConfig.db).then(() => {
+        console.success('INFO Success! Database connected')
     },
     error => {
-        console.log('Fatal Database could not be connected : ' + error)
+        console.log('Fatal Database could not be connected : ' + err)
     }
 )
-
-connect.then((db) => {
-    console.log("SUCCESS Database connected");
-}, (err) => { console.log('ERROR Datase connection failed due to the following errors: ' err); });
 
 
 

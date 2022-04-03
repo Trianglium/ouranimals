@@ -6,8 +6,9 @@ const otterSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    },
-    owner: [creditSchema]
+    }
+}, {
+    collection: ["https://unsplash.com/s/photos/otter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"]
 });
 
 var Otters = mongoose.model('Otter', otterSchema);
