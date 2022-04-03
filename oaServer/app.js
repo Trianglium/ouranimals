@@ -1,39 +1,55 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let express = require('express'),
+    createError = require('http-errors'),
+    cors = require('cors'),
+    path = require('path'),
+    mongoose = require('mongoose'),
+    dbConfig = require('./conf/database'),
+    bodyParser = require('body-parser'),
+    cookieParser = require('cookie-parser'),
+    logger = require('morgan'),
+    Console = require("Console");
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//  Routers
+const indexRouter = require('./routes/index'),
+    usersRouter = require('./routes/users'),
+    bearRouter = require('./routes/bearRouter'),
+    dogRouter = require('./routes/dogRouter'),
+    foxRouter = require('./routes/foxRouter'),
+    otterRouter = require('./routes/otterRouter'),
+    animalRouter = require('./routes/animalRouter');
 
-// Animal Image Routers
-var bearRouter = require('./routes/bearRouter');
-var dogRouter = require('./routes/dogRouter');
-var foxRouter = require('./routes/foxRouter');
-var otterRouter = require('./routes/otterRouter');
-var animalRouter = require('./routes/animalRouter');
+// Models
+//const Bears = require('./models/bears'),
+    //Dogs = require('./models/dogs'),
+    //Foxes = require('./models/foxes'),
+    //Otters = require('./models/otters'),
+    //Animals = require('./models/animals');
 
-// Connect to MongoDB Server
-const mongoose = require('mongoose');
 
-const Bears = require('./models/bears');
-const Dogs = require('./models/dogs');
-const Foxes = require('./models/foxes');
-const Otters = require('./models/otters');
-const Animals = require('./models/animals')
-
-const url = 'mongodb://localhost:27017/ourAnimals';
-const connect = mongoose.connect(url);
+// Connect MongoDB Server
+mongoose.Promise = global.Promise;
+mongoose.connect(dbConfig.db, {
+    useNewUrlParser: true
+}).then(() => {
+        Console.success('INFO Success! Database connected')
+    },
+    error => {
+        console.log('Fatal Database could not be connected : ' + error)
+    }
+)
 
 connect.then((db) => {
-    console.log("Connected correctly to server");
-}, (err) => { console.log(err); });
+    console.log("SUCCESS Database connected");
+}, (err) => { console.log('ERROR Datase connection failed due to the following errors: ' err); });
 
 
-var app = express();
 
-// view engine setup
+// Express setup
+const app = express();
+app.use(cors());
+
+
+// view engine setup - Jade
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -41,16 +57,20 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Index Route
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
-// Animal Image Routers
+// Endpoint Routes
+app.use('/users', usersRouter);
 app.use('/bears', bearRouter);
 app.use('/dogs', dogRouter);
 app.use('/foxes', foxRouter);
 app.use('/otters', otterRouter);
+app.use('/animals', animalRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -67,5 +87,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+// Static build location
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
