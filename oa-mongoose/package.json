@@ -8,5 +8,8 @@
     "start": "node index"
   },
   "author": "Jordan Brocker Rudow",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.2.9"
+  }
 }
