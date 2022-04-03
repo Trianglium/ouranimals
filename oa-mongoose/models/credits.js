@@ -11,7 +11,7 @@ var websiteSchema = new Schema({
     site: "Unsplash"
 });
 
-var ownerSchema = new Schema({
+const ownerSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -24,6 +24,6 @@ var ownerSchema = new Schema({
     collections: [ websiteSchema ]
 });
 
-var Owners = mongoose.model('Owner', ownerSchema);
+const Owners = mongoose.model('Owner', ownerSchema);
 
 module.exports = Owners;
