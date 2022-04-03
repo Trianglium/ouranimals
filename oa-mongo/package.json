@@ -8,5 +8,9 @@
     "start": "node index"
   },
   "author": "Jordan Brocker Rudow",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "mongodb": "^4.4.1"
+  }
 }
