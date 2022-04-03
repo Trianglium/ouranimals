@@ -9,26 +9,24 @@ connect.then((db) => {
 
     console.log('Connected correctly to server');
 
-    var newOtter = Otters({
-        image: 'static/images/otters/1.jpg'
+    Otters.create({
+      image: 'static/images/otters/1.jpg'
+    })
+    .then((otter) => {
+        console.log(otter);
+
+        return Otters.find({}).exec();
+    })
+    .then((otters) => {
+        console.log(otters);
+
+        return Otters.remove({});
+    })
+    .then(() => {
+        return mongoose.connection.close();
+    })
+    .catch((err) => {
+        console.log(err);
     });
-
-    newOtter.save()
-        .then((otter) => {
-            console.log(otter);
-
-            return Otters.find({});
-        })
-        .then((otters) => {
-            console.log(otters);
-
-            return Otters.remove({});
-        })
-        .then(() => {
-            return mongoose.connection.close();
-        })
-        .catch((err) => {
-            console.log(err);
-        });
 
 });
