@@ -1,200 +1,124 @@
 {
-  "id": 1,
-  "image": "image":"otters/1.jpg",
-  "acknowledgements": [{"id": 1, "name": "Julie Clarke", "contact": "https://unsplash.com/@clarbner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"}]
-},
-{
-  "id": 2,
-  "image": "image":"otters/2.jpg",
-  "acknowledgements": []
-},
-{
-  "id": 3,
-  "image": "image":"otters/3.jpg",
-  "acknowledgements": []
-},
-{
-  "id": 4,
-  "image": "image":"otters/4.jpg",
-  "acknowledgements": []
-},
-{
-  "id": 5,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 6,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 7,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 8,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 9,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 10,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 11,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 12,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 13,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 14,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 15,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 16,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 17,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 18,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 19,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 20,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 21,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 22,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 23,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 24,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 25,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 26,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 27,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 28,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 29,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 30,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 31,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 32,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 33,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 34,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 35,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 36,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 37,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 38,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 39,
-  "image": "",
-  "acknowledgements": []
-},
-{
-  "id": 40,
-  "image": "",
-  "acknowledgements": []
-},
+  "bears": [
+    {
+      "image": "images/bears/1.jpg"
+    },
+    {
+      "image": "images/bears/2.jpg"
+    }
+  ],
+  "dogs": [
+    {
+      "image": "images/dogs/1.jpg"
+    },
+    {
+      "image": "images/dogs/2.jpg"
+    },
+    {
+      "image": "images/dogs/3.jpg"
+    }
+  ],
+  "foxes": [
+    {
+      "image": "images/foxes/1.jpg"
+    },
+    {
+      "image": "images/foxes/2.jpg"
+    }
+  ],
+  "otters": [
+    {
+      "image": "images/otters/1.jpg"
+    },
+    {
+      "image": "images/otters/2.jpg"
+    },
+    {
+      "image": "images/otters/3.jpg"
+    },
+    {
+      "image": "images/otters/4.jpg"
+    },
+    {
+      "image": "images/otters/5.jpg"
+    },
+    {
+      "image": "images/otters/6.jpg"
+    },
+    {
+      "image": "images/otters/7.jpg"
+    },
+    {
+      "image": "images/otters/8.jpg"
+    },
+    {
+      "image": "images/otters/9.jpg"
+    },
+    {
+      "image": "images/otters/10.jpg"
+    },
+    {
+      "image": "images/otters/11.jpg"
+    },
+    {
+      "image": "images/otters/12.jpg"
+    },
+    {
+      "image": "images/otters/13.jpg"
+    },
+    {
+      "image": "images/otters/14.jpg"
+    },
+    {
+      "image": "images/otters/15.jpg"
+    },
+    {
+      "image": "images/otters/16.jpg"
+    },
+    {
+      "image": "images/otters/17.jpg"
+    },
+    {
+      "image": "images/otters/18.jpg"
+    },
+    {
+      "image": "images/otters/19.jpg"
+    },
+    {
+      "image": "images/otters/20.jpg"
+    },
+    {
+      "image": "images/otters/21.jpg"
+    },
+    {
+      "image": "images/otters/22.jpg"
+    },
+    {
+      "image": "images/otters/23.jpg"
+    },
+    {
+      "image": "images/otters/24.jpg"
+    },
+    {
+      "image": "images/otters/25.jpg"
+    },
+    {
+      "image": "images/otters/26.jpg"
+    },
+    {
+      "image": "images/otters/27.jpg"
+    },
+    {
+      "image": "images/otters/28.jpg"
+    },
+    {
+      "image": "images/otters/29.jpg"
+    },
+    {
+      "image": "images/otters/30.jpg"
+    },
+    {
+      "image": "images/otters/31.jpg"
+    }
+  ]
+}
