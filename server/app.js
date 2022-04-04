@@ -22,7 +22,6 @@ var foxRouter = require('./routes/foxRouter');
 const Otters = require('./models/otters');
 var otterRouter = require('./routes/otterRouter');
 
-
 var app = express();
 
 // Connect to MongoDB
@@ -37,7 +36,6 @@ connect.then((db) => {
 // view engine setup - Pug
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, "public")));
 
 
 app.use(logger('dev'));
@@ -48,14 +46,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Index and API Root
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 app.use('/bears', bearRouter);
 app.use('/dogs', dogRouter);
 app.use('/foxes', foxRouter);
-app.use('/otters', otterRouter);
-
-
+app.use('/otters', otterRouter); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
