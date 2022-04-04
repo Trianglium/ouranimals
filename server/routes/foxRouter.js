@@ -12,6 +12,7 @@ foxRouter.route('/')
 .get((req,res,next) => {
     Foxes.find({})
     .then((foxes) => {
+        console.log('Foxes:', foxes);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(foxes);
