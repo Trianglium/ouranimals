@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var ownerSchema = new Schema({
+  _id: Number,
   name: String,
   contact: String,
 });
 
 const otterSchema = new Schema({
+    _id: Number,
     image: {
         type: String,
         required: true,
