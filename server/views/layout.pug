@@ -1,7 +1,12 @@
+block variables
 doctype html
 html
   head
-    title= title
+    meta(charset="utf-8")
+    link(rel="shortcut icon", href="/favicon.ico")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title #{title} | WHATABYTE
   body
-    block content
+    div#root
+      block layout-content

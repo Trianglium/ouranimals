@@ -1,12 +1,17 @@
-doctype html
-html(lang='en')
- head
-   #{title}
- body
-   h1 Welcome to OurAnimals Image Library
-   h2 Checkout the API
-   div.container
-     p otters
-     p bears
-     p foxes
-     p dogs
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner OurAnimals Image Library
+    div.Message
+      div.Title
+        h2 OurAnimals REST API
+      span.Details Access bear, dog, fox, and or otter photos with ease
+    div.NavButtons
+      a(href="/index")
+      a(href="/Documentation")
+      a(href="/bears")
+      a(href="/dogs")
+      a(href="/foxes")
+      a(href="/otters")
+        div.NavButton Try it
