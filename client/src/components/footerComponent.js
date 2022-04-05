@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Media, Button } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
   render() {
     return(
-      <div></div>
+      <div className="container">
+      </div>
     );
   }
 }

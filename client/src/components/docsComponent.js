@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 class Docs extends Component {
   render() {
     return(
-      <div></div>
+      <div className="container">
+      </div>
     );
   }
 }

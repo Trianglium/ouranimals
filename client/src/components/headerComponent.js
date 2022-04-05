@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function Header(props) {
     return(
       <div className="header">
-        <Navbar dark>
+        <Navbar dark color="primary">
         <div className="container">
         <NavbarBrand className="mr-auto" href="/">OurAnimals</NavbarBrand>
           <Nav className="ml-auto">

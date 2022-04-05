@@ -8,10 +8,9 @@ class Home extends Component {
 
     }
     return (
-      <>
-        .container-fluid
-        </Container>
-        </>
+      <div className="container">
+        
+      </div>
     )
   }
 }
