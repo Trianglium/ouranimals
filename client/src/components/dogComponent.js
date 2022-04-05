@@ -9,3 +9,4 @@ class DogEndpoint extends Component {
     );
   }
 }
+export default DogEndpoint;

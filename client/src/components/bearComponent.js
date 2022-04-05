@@ -9,3 +9,4 @@ class BearEndpoint extends Component {
     );
   }
 }
+export default BearEndpoint;

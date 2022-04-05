@@ -9,3 +9,4 @@ class OtterEndpoint extends Component {
     );
   }
 }
+export default OtterEndpoint;

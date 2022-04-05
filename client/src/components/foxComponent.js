@@ -9,3 +9,4 @@ class FoxEndpoint extends Component {
     );
   }
 }
+export default FoxEndpoint;
