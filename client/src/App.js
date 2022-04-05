@@ -1,12 +1,10 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
-import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-//import { Provider } from 'react-redux';
-//import { ConfigureStore } from './redux/configureStore';
 
-import Header from './components/headerComponent'
+import Header from './components/headerComponent';
 
 
 class App extends Component {
@@ -14,6 +12,7 @@ class App extends Component {
     return (
         <div className="App">
           <Header />
+          <h1>OurAnimals</h1>
         </div>
     );
   }
