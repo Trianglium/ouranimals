@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Media, Button } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { Loading } from './loadingComponent';
 
 class DogEndpoint extends Component {
   render() {
