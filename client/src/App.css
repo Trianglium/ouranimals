@@ -108,3 +108,18 @@ address{
   text-align: center;
   background: #ddd;
 }
+
+
+/* Animals Page */
+.navbar-dark .nav-item .nav-link {
+  color: #fff;
+}
+
+svg {
+  max-width: 48px;
+  max-height: 48px;
+}
+.ns-text {
+  font-weight: stronger;
+  padding-left: 13%;
+}
