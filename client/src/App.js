@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import { BrowserRouter } from 'react-router-dom';
 
-import HeaderComponent from './components/headerComponent';
+import Header from './pages/Header';
+import Navbar from './pages/Navbar';
+import Home from './pages/Home';
+import Footer from './pages/Footer';
 
 
-class App extends Component {
-  render() {
+function App() {
     return (
-        <div className="App">
-          <HeaderComponent />
-          <h1>OurAnimals</h1>
+      <div>
+        <Header />
+        <Navbar />
+        <div className="row">
+          <Home />
         </div>
+        <Footer />
+      </div>
     );
-  }
 }
 
 export default App;
