@@ -15,7 +15,7 @@ function App() {
           <Header />
           <Navigation />
           <div className="row">
-            <Gallery />
+            <ImageLibrary />
           </div>
           <Footer />
         </Container>
