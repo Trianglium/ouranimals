@@ -12,6 +12,10 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
+import logo from '../logo.svg';
+import logoLight from '../logo-light.svg';
+import logoDark from '../logo-dark.svg';
+
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -28,14 +32,15 @@ export default class Navigation extends Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><img src="../../../client/public/oa-logo.svg" alt="Our Animals Logo" /> OurAnimals</NavbarBrand>
+      <div className="oa-nav ns-text">
+        <Navbar className="oa-nav" expand="md">
+          <img src={logoLight} className="App-logo" alt="OurAnimals logo" />
+          <NavbarBrand href="/" className="ns-text">Our Animals</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/">API</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/Trianglium/ouranimals">GitHub</NavLink>
