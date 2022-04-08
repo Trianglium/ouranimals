@@ -103,6 +103,11 @@ dist
 # TernJS port file
 .tern-port
 
+# OurAnimals alt directories
 /docs
 /oaServer
 /mongodb
+/oa-mongo
+/oa-mongoose
+/oa-http
+/oa-express
