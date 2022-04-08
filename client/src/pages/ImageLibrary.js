@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, CardTitle, CardText, CardImg, Button, Uncont
 
 const items = [
   {
-    src: '/dogspromo.png',
+    src: './dogspromo.png',
     altText: 'Bears API Promo',
     caption: 'Life without browsing /bears, is unbearable',
     header: 'Bear'
