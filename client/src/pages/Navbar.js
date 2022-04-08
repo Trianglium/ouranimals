@@ -32,11 +32,11 @@ export default class Navigation extends Component {
   }
   render() {
     return (
-      <div className="oa-nav ns-text">
+      <div className="oa-nav">
         <Navbar className="oa-nav" expand="md">
           <img src={logoLight} className="App-logo" alt="OurAnimals logo" />
-          <NavbarBrand href="/" className="ns-text">Our Animals</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarBrand href="/">Our Animals</NavbarBrand>
+          <NavbarToggler dark onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
