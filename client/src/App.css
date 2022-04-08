@@ -24,21 +24,24 @@
     min-height:400px;
 }
 
-.footer{
+.sitemap{
     background-color: var(--darkestblue);
     color: var(--ivory);
     margin:3px auto;
     padding: 20px 0px 20px 0px;
 }
-.footer a{
+.sitemap a:active{
+  color: var(--greyblue);
+}
+.sitemap a{
   color: var(--midgreen);
   text-decoration: none;
 }
-.footer a:hover{
+.sitemap a:hover{
   color: var(--ivory);
 }
 
-.footer ul{
+.sitemap ul{
   list-style-type: none;
   margin-top: 1em;
 }
@@ -141,8 +144,8 @@ svg {
 
 .dropdownmenu{
   color: var(--ivory)!important;
-  background-color: var(--darkestblue);
   padding: 1em;
   margin-bottom: 2em;
   text-decoration: none;
+  border: var(--ivory);
 }

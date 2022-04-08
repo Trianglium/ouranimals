@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 import './App.css';
-import Header from './pages/Header';
 import Navigation from './pages/Navbar';
 import Home from './pages/Home';
 import ImageLibrary from './pages/ImageLibrary';
@@ -12,7 +11,6 @@ function App() {
     return (
       <div >
         <Container>
-          <Header />
           <Navigation />
           <div className="row">
             <ImageLibrary />
