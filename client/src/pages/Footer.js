@@ -11,7 +11,7 @@ import {
 class Footer extends Component {
   render() {
     return (
-      <div className="footer">
+      <div className="sitemap">
         <Container>
           <Row>
             <Col xs={1} sm={1}>
