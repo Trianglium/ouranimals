@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Card, CardTitle, CardText, CardImg, Button, ListGroupItem, ListGroup,ButtonGroup, UncontrolledCarousel, BreadcrumbItem, Breadcrumb, CardBody } from 'reactstrap';
+import { Container, Row, Col, Card, CardTitle, CardText, CardImg, Button, ButtonGroup, UncontrolledCarousel, CardBody } from 'reactstrap';
 
 const items = [
   {
@@ -46,26 +46,29 @@ class ImageLibrary extends Component {
                             <CardText className="mt-4">
                               <h3><small>We guarantee that you’ll be beary satisfied with our bear collection.</small></h3>
                             </CardText>
-                            <ListGroup horizontal className="text-center">
-                              <ListGroupItem
+                            <ButtonGroup size="sm">
+                              <Button
                                 href="#"
                                 tag="a"
+                                variant="outline-primary"
                               >
                               Browse Bears
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="#"
                                 tag="a"
+                                variant="outline-primary"
                               >
                               Try it
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="#"
                                 tag="a"
+                                variant="outline-primary"
                               >
                               Read the docs
-                              </ListGroupItem>
-                            </ListGroup>
+                              </Button>
+                            </ButtonGroup>
                           </CardBody>
                       </Card>
                     </Col>
@@ -82,9 +85,9 @@ class ImageLibrary extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row className="mt-4">
                   <Col xs={6} className="align-middle">
-                    <Card>
+                    <Card style={{ width: '100%' }}>
                           <CardImg
                             alt="Dogs"
                             src="https://raw.githubusercontent.com/Trianglium/ouranimals/main/server/public/images/dogs/29.jpg"
@@ -105,36 +108,37 @@ class ImageLibrary extends Component {
                         <CardText>
                           <h3><small>We’ll throw you a bone and share the cutest puppers on the web.</small></h3>
                         </CardText>
-                        <ListGroup horizontal className="text-center">
-                          <ListGroupItem
+                        <ButtonGroup size="sm">
+                          <Button
                             href="/dogs"
                             tag="a"
                           >
                           Browse Dogs
-                          </ListGroupItem>
-                          <ListGroupItem
+                          </Button>
+                          <Button
                             href="/dogs/1"
                             tag="a"
                           >
                           Try it
-                          </ListGroupItem>
-                          <ListGroupItem
+                          </Button>
+                          <Button
                             href="/docs"
                             tag="a"
                           >
                           Read the docs
-                          </ListGroupItem>
-                        </ListGroup>
+                          </Button>
+                        </ButtonGroup>
                       </CardBody>
                     </Card>
                   </Col>
                 </Row>
 
-                <Row>
+                <Row className="mt-4">
                   <Col xs={6} className="align-middle">
                     <Card
                         body
                         className="text-center"
+                        width="100%"
                       >
                       <CardBody>
                         <CardTitle tag="h2" className="display-5">
@@ -145,32 +149,32 @@ class ImageLibrary extends Component {
                         </small></h3>
                         </CardText>
                         <div className="d-inling-flex text-center">
-                          <ListGroup horizontal className="text-center">
-                              <ListGroupItem
+                          <ButtonGroup size="sm">
+                              <Button
                                 href="/foxes"
                                 tag="a"
                               >
                               Browse Foxes
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="/foxes/1"
                                 tag="a"
                               >
                               Try it
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="/docs"
                                 tag="a"
                               >
                               Read the docs
-                              </ListGroupItem>
-                          </ListGroup>
+                              </Button>
+                          </ButtonGroup>
                         </div>
                       </CardBody>
                     </Card>
                   </Col>
                     <Col xs={6} className="align-middle">
-                      <Card>
+                      <Card style={{ width: '100%' }}>
                         <CardImg
                           alt="Foxes"
                           src="https://raw.githubusercontent.com/Trianglium/ouranimals/main/server/public/images/foxes/31.jpg"
@@ -181,9 +185,9 @@ class ImageLibrary extends Component {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row className="mt-4">
                     <Col xs={6} className="align-middle">
-                      <Card>
+                      <Card style={{ width: '100%' }}>
                         <CardImg
                           alt="Otters"
                           src="https://raw.githubusercontent.com/Trianglium/ouranimals/main/server/public/images/otters/31.jpg"
@@ -204,26 +208,26 @@ class ImageLibrary extends Component {
                           <CardText>
                           <h3><small>We offer otter photos like no otter!</small></h3>
                           </CardText>
-                            <ListGroup horizontal className="text-center">
-                              <ListGroupItem
+                            <ButtonGroup size="sm">
+                              <Button
                                 href="/otters"
                                 tag="a"
                               >
                               Browse Otters
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="/otters/1"
                                 tag="a"
                               >
                               Try it
-                              </ListGroupItem>
-                              <ListGroupItem
+                              </Button>
+                              <Button
                                 href="/docs"
                                 tag="a"
                               >
                               Read the docs
-                              </ListGroupItem>
-                            </ListGroup>
+                              </Button>
+                            </ButtonGroup>
                         </CardBody>
                       </Card>
                     </Col>
