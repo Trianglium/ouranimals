@@ -24,6 +24,10 @@
     min-height:400px;
 }
 
+.cb-transparent {
+  border: #fff;
+  border-radius: 25px;
+}
 .sitemap{
     background-color: var(--darkestblue);
     color: var(--ivory);
@@ -87,13 +91,6 @@ address{
   margin: 2rem;
 }
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
 
 /* Animals Page */
 .navbar-dark .nav-item .nav-link {
@@ -127,25 +124,4 @@ svg {
   padding: 1em;
   margin-bottom: 2em;
   text-decoration: none;
-}
-
-.oa-nav img{
-  color: var(--ivory)!important;
-  background-color: var(--darkestblue);
-  padding: 1em;
-  margin-bottom: 2em;
-  text-decoration: none;
-}
-/* Change color on hover */
-.oa-nav a:hover {
-  background-color: var(--midnight);
-  color: var(--ivory);
-}
-
-.dropdownmenu{
-  color: var(--ivory)!important;
-  padding: 1em;
-  margin-bottom: 2em;
-  text-decoration: none;
-  border: var(--ivory);
 }
