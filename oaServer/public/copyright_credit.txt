@@ -1,8 +1,0 @@
-Unsplash
-otters: "https://unsplash.com/s/photos/otter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-
-foxes: "https://unsplash.com/s/photos/fox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-
-bears: "https://unsplash.com/s/photos/bear?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-
-dogs: "https://unsplash.com/s/photos/dogs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
