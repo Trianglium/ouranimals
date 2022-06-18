@@ -1,23 +1,29 @@
 {
   "name": "ouranimals",
   "version": "2.0.0",
-  "description": "Image Library for bear, dog, fox, and otter photos",
-  "main": "index.js",
+  "description": "Animal Image Library specializing in bear, dog, fox and otter pics. OurAnimals is intended to be a RESTful API built with the MERN Stack",
+  "main": "OurAnimals.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Trianglium/ouranimals.git"
   },
-  "keywords": [
-    "animals", "fox", "bear", "dog", "otter", "REST", "API", "image library", "our animals"
-  ],
-  "author": "Jordan Brocker Rudow",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Trianglium/ouranimals/issues"
   },
-  "homepage": "https://github.com/Trianglium/ouranimals#readme"
+  "homepage": "https://github.com/Trianglium/ouranimals#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.4.0",
+    "morgan": "^1.10.0"
+  }
 }
