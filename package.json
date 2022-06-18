@@ -1,6 +1,6 @@
 {
   "name": "ouranimals",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Image Library for bear, dog, fox, and otter photos",
   "main": "index.js",
   "scripts": {
