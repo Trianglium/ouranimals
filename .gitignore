@@ -105,9 +105,4 @@ dist
 
 # OurAnimals alt directories
 /docs
-/oaServer
-/mongodb
-/oa-mongo
-/oa-mongoose
-/oa-http
-/oa-express
+/mongodb/data
