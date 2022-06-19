@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.json());
-app.use('/api', require('./route/request'));
+app.use('/api', require('./routes/images'));
 
 app.listen(port, () => {
   console.log(`server listening on ${port}`)
