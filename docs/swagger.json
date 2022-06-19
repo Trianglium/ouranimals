@@ -1,0 +1,11 @@
+{
+  "title": "OurAnimals",
+  "description": "OurAnimals is an image library for pictures of bears, dogs, foxes, and otters.",
+  "author": "Jordan Brocker Rudow",
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/Trianglium/ouranimals/blob/7b57cdcc54c1904b395f8d91818a07c583fcc103/LICENSE"
+
+  },
+  "version": "1.0.1"
+}

@@ -103,6 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# OurAnimals alt directories
-/docs
+
 /mongodb/data
+docs/dbutil.py
