@@ -106,3 +106,4 @@ dist
 
 /mongodb/data
 docs/dbutil.py
+client
