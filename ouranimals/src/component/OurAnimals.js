@@ -11,7 +11,7 @@ class OurAnimals extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8081/api/image')
+        fetch('http://localhost:8081/api/images')
             .then(res => res.json())
             .then(
                 (data) => {
@@ -43,7 +43,7 @@ class OurAnimals extends Component {
         } else {
             return (
                 <div>
-                  {animals.map((animal_im) => ((<img src={animal_im.image} alt={animal_im.type}>)))}
+                  {animals.map((animal_im) => ((<img src={animal_im.image} alt={animal_im.type}/>)))}
                 </div>
             );
         }
